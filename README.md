@@ -194,6 +194,7 @@ The error usually occurs when running yarn dev inside of the `/site/` folder aft
 In order to fix this, run `yarn dev` in the monorepo root folder first.
 
 > Using `yarn dev` from the root is recommended for developing, which will run watch mode on all packages.
+
+</details>
 meow
 <img src="https://chudo-prirody.com/uploads/posts/2021-08/1628652615_154-p-manul-koshka-foto-175.jpg" alt="cat"></img>
-</details>
