@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;500&display=swap');
+.navbar
+{
+    background-color:#FFFAED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.img
+{
+    src:url("/site/public/assets/headerImg/Basket.png");
+}
+.navbar>div
+{
+    display: flex;
+    
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.leftElements
+{
+    display: flex;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+.leftElements>p
+{
+    margin-left: 7.5px;
+}
+
+.centerElements>a
+{
+    margin: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.rightElements>p
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+}
