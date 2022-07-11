@@ -59,3 +59,16 @@
     text-align: center;
     margin-right: 20px;
 }
+.basket
+{
+    position: relative;
+}
+.basket>p
+{
+    position: absolute;
+    top: 3%;
+    right: 12%;
+    font-size: 10px;
+    font-weight: bold;
+    color:white;
+}

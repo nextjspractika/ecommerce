@@ -1,12 +1,11 @@
 import classes from '../header/header.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
-///import logo from "../../../site/public/assets/headerImg/Basket.png";
-//import logo2 from "../../../site/public/assets/headerImg/Basket.png";
-import logo from './Basket.png';
-export function Header(){
+
+
+export function Header(props:any){
    // console.log(logo);
     console.log('1');
+    
     return(
         <>
             <nav className={classes.navbar}>
@@ -15,16 +14,20 @@ export function Header(){
                     <p>shoplogo</p>
                 </div>
                 <div className={classes.centerElements}>
-                    <Link href={'/'}><a>HOME</a></Link>
-                    <Link href={'/'}><a>SHOP</a></Link>
+                    <Link href={'./home'}><a>HOME</a></Link>
+                    <Link href={'./shop'}><a>SHOP</a></Link>
                     <Link href={'/'}><a>BLOG</a></Link>
                     <Link href={'/'}><a>CONTACTS</a></Link>
                 </div>
                 <div className={classes.rightElements}>
                     <p className={classes.p}>$ 200</p>
-                    <img src={'/assets/headerImg/Basket.png'} />
+                    <div className={classes.basket}>
+                        <img src={'/assets/headerImg/Basket.png'} />
+                        <p>{props.cartNumber}</p>
+                    </div>
                 </div>
             </nav>
+
         </>
     )
 }
