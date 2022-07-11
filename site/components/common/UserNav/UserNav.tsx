@@ -14,9 +14,9 @@ import {
   Button,
 } from '@components/ui'
 
-import type { LineItem } from '@commerce/types/cart'
+import type { LineItem } from '@commerce/types/cart' 
 
-const countItem = (count: number, item: LineItem) => count + item.quantity
+const countItem = (count: number, item: LineItem) => count + item.quantity;
 
 const UserNav: React.FC<{
   className?: string
