@@ -82,6 +82,12 @@ body {
   position: relative;
   min-height: 100%;
   margin: 0;
+  background: #FFFAED;
+
+}
+
+#__next {
+  background: #FFFAED;
 }
 
 a {
