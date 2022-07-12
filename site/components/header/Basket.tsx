@@ -12,7 +12,7 @@ export function Basket(props:BasketProps){
         
         <div className={classes.basket}>            
             <svg height="50" width="50">
-                <circle cx="25" cy="25" r="20"  fill="radial-gradient(50% 50% at 50% 50%, rgba(253, 172, 31, 0) 0%, #FFEFCC 89.58%)" />               
+                <circle cx="25" cy="25" r="20" stroke='#FFEFCC' stroke-width="3" fill="#feebc0" />               
             </svg>
             <IconBasket/>
             <p>{props.cartNumber}</p>
