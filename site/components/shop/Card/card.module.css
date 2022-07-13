@@ -9,9 +9,9 @@
 }
 
 .card__list {
-    width: 350px;
+    min-width: 350px;
     height: 391px;
-    margin: 80px 0;
+    margin: 40px 0;
 }
 
 .card__img {
