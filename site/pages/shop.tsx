@@ -2,8 +2,44 @@ import CardList from '@components/shop/CardList'
 import React from 'react'
 import { ContentLayout } from '@components/shop/Layout'
 import { Layout } from '@components/layout'
+import commerce from '@lib/api/commerce'
+import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import Card from '@components/shop/Card'
 
-export function Shop() {
+export async function getStaticProps({
+  preview,
+  locale,
+  locales,
+}: GetStaticPropsContext) {
+  const config = { locale, locales }
+  const productsPromise = commerce.getAllProducts({
+    variables: { first: 6 },
+    config,
+    preview,
+    // Saleor provider only
+    ...({ featured: true } as any),
+  })
+  const pagesPromise = commerce.getAllPages({ config, preview })
+  const siteInfoPromise = commerce.getSiteInfo({ config, preview })
+  const { products } = await productsPromise
+  const { pages } = await pagesPromise
+  const { categories, brands } = await siteInfoPromise
+
+  return {
+    props: {
+      products,
+      categories,
+      brands,
+      pages,
+    },
+    revalidate: 60,
+  }
+}
+
+
+export function Shop({
+  products,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   let cartNumber =
     typeof window !== 'undefined' ? localStorage.getItem('cartNumber') : null
   let totalPrice =
@@ -14,7 +50,9 @@ export function Shop() {
   return (
     <Layout cartNumber={parseInt(cartNumber)} totalPrice={parseInt(totalPrice)}>
       <ContentLayout title={title}>
-        <CardList />
+        <CardList>{products.map((product: any, i: number) => (
+          <Card key={product.id} product={product} />
+        ))}</CardList>
       </ContentLayout>
     </Layout>
   )

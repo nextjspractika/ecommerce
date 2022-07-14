@@ -1,15 +1,13 @@
 import classes from './card.module.css'
 import useClassName from '../../../hooks/useClassName'
-import IconBasket from '../../icons/IconBasket'
 import CartButton from '../CartButton'
+import type { Product } from '@commerce/types/product'
+import Image from 'next/image'
 
 type TProps = {
   className?: string
   isCardList?: boolean
-  image: string
-  title: string
-  price: number
-  currency: String
+  product: Product
 }
 
 export function Card(props: TProps) {
@@ -23,11 +21,17 @@ export function Card(props: TProps) {
     >
       <CartButton />
       <div className={classes.card__img}>
-        <img width="100%" height="auto" src={props.image} alt={props.title} />
+        <Image
+           height={200}
+           width={280}
+           layout="fixed"
+          src={props.product.images[0].url}
+          alt={props.product.name}
+        />
       </div>
-      <h5 className={classes.card__title}>{props.title}</h5>
+      <h5 className={classes.card__title}>{props.product.name}</h5>
       <span className={classes.card__price}>
-        {props.price.toString() + props.currency}
+        {props.product.price.value.toString() + ' RUB'}
       </span>
     </div>
   )
