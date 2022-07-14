@@ -1,0 +1,47 @@
+.main {
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top {
+    position: relative;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px;
+    margin-top: 85px;
+    padding-top: 20px;
+}
+
+.top>h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 270px;
+}
+
+.home {
+    line-height: 19px;
+    color: #fff;
+}
+
+.top>span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+}
+
+.select {
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    margin-left: 20px;
+}
