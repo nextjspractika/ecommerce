@@ -17,6 +17,7 @@ const SidebarLayout: FC<ComponentProps> = ({
 }) => {
   return (
     <div className={cn(s.root, className)}>
+      <p>sitebar</p>
       <header className={s.header}>
         {handleClose && (
           <button
@@ -42,6 +43,7 @@ const SidebarLayout: FC<ComponentProps> = ({
         <UserNav />
       </header>
       <div className={s.container}>{children}</div>
+      <p>sitebar</p>
     </div>
   )
 }

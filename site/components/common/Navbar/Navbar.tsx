@@ -14,35 +14,36 @@ interface NavbarProps {
   links?: Link[]
 }
 
-const Navbar: FC<NavbarProps> = ({ links }) => (
+const Navbar = () => (
   <NavbarRoot>
-    <Container clean className="mx-auto max-w-8xl px-6">
+    <Container clean className="mx-auto max-w-8xl px-6 bg-[#FFFAED]"  >
       <div className={s.nav}>
-        <div className="flex items-center flex-1">
-          <Link href="/">
-            <a className={s.logo} aria-label="Logo">
-              <Logo />
-            </a>
-          </Link>
-          <nav className={s.navMenu}>
-            <Link href="/search">
-              <a className={s.link}>All</a>
-            </Link>
-            {links?.map((l) => (
-              <Link href={l.href} key={l.href}>
-                <a className={s.link}>{l.label}</a>
+       
+                      
+            <div className={s.leftElements}>
+               <img src={'/assets/headerImg/Logo.png'} alt="logo" />
+               <p>shoplogo</p>
+            </div>            
+          
+            <div className={s.centerElements}>
+              <Link href={'/'}>
+                <a>home</a>
               </Link>
-            ))}
-          </nav>
-        </div>
-        {process.env.COMMERCE_SEARCH_ENABLED && (
-          <div className="justify-center flex-1 hidden lg:flex">
-            <Searchbar />
-          </div>
-        )}
-        <div className="flex items-center justify-end flex-1 space-x-8">
+              <Link href={'/shop'}>
+                <a>shop</a>
+              </Link>
+              <Link href={'/site/pages/home'}>
+                <a>blog</a>
+              </Link>
+              <Link href={'/'}>
+                <a>CONTACTS</a>
+              </Link>
+            </div>
+        
+        
+        
           <UserNav />
-        </div>
+        
       </div>
       {process.env.COMMERCE_SEARCH_ENABLED && (
         <div className="flex pb-4 lg:px-6 lg:hidden">

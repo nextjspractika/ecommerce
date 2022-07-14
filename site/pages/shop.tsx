@@ -1,7 +1,7 @@
 import CardList from '@components/shop/CardList'
 import React from 'react'
+import { Layout } from '@components/common'
 import { ContentLayout } from '@components/shop/Layout'
-import { Layout } from '@components/layout'
 import commerce from '@lib/api/commerce'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import Card from '@components/shop/Card'
@@ -36,25 +36,16 @@ export async function getStaticProps({
   }
 }
 
-
-export function Shop({
+export default function Shop({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  let cartNumber =
-    typeof window !== 'undefined' ? localStorage.getItem('cartNumber') : null
-  let totalPrice =
-    typeof window !== 'undefined' ? localStorage.getItem('totalPrice') : null
-  if (cartNumber == null) cartNumber = '0'
-  if (totalPrice == null) totalPrice = '0'
   let title = 'Shop'
   return (
-    <Layout cartNumber={parseInt(cartNumber)} totalPrice={parseInt(totalPrice)}>
       <ContentLayout title={title}>
         <CardList>{products.map((product: any, i: number) => (
           <Card key={product.id} product={product} />
         ))}</CardList>
       </ContentLayout>
-    </Layout>
   )
 }
-export default Shop
+Shop.Layout = Layout

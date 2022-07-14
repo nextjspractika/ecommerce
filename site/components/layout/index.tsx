@@ -1,5 +1,7 @@
-import { Header } from '@components/header'
-import Footer from '@components/footer'
+import classes from '../header/header.module.css';
+import Link from 'next/link';
+import { Header } from '@components/header';
+import {UserNav} from '@components/common';
 
 type LayoutProps = {
   cartNumber: number
