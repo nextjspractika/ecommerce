@@ -57,3 +57,17 @@
     @apply hidden;
   }
 }
+.basket {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  width: 20px;
+  height: 20px;
+  background-color: #FDAC1F;
+  border-radius: 100px;
+  text-align: center;
+  
+}
