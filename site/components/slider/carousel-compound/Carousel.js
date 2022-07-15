@@ -90,7 +90,7 @@ export const Carousel = ({ children, infinite }) => {
   return (
     <CarouselContext.Provider value={{ width }}>
       <div className={classes.mainContainer}>
-        <button className={classes.arrow} onClick={handleLeftArrowClick}>left</button>
+        <button className={`${classes.arrow} ${classes.Leftarrow}`} onClick={handleLeftArrowClick}></button>
         <div className={classes.window} ref={windowElRef}>
           <div
             className={classes.allPagesContainer}
@@ -102,7 +102,7 @@ export const Carousel = ({ children, infinite }) => {
             {pages}
           </div>
         </div>
-        <button className={classes.arrow} onClick={handleRightArrowClick} >right</button>
+        <button className={`${classes.arrow} ${classes.Rightarrow}`} onClick={handleRightArrowClick} ></button>
       </div>
     </CarouselContext.Provider>
   )

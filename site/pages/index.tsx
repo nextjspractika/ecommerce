@@ -6,6 +6,7 @@ import { Grid, Marquee, Hero } from '@components/ui'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import CarouselCompound from '@components/slider/carousel-compound'
 import classes from './index.module.css';
+import ImageSlider from '@components/slider/ImageSlider'
 export async function getStaticProps({
   preview,
   locale,
@@ -44,13 +45,22 @@ export default function Home({
     
     <CarouselCompound infinite>
       <CarouselCompound.Page>
-        <div className={`${classes.item} ${classes.item1}`}>Item 1</div>
+        <ImageSlider source='/assets/sliderImages/slide1.png' 
+          header='La banane Meunier' 
+          headerText='A bag is a kind of soft container. It can hold or carry things. It may be made from cloth, leather, plastic, or paper.'
+        />
       </CarouselCompound.Page>
       <CarouselCompound.Page>
-        <div className={`${classes.item} ${classes.item2}`}>Item 2</div>
+      <ImageSlider source='/assets/sliderImages/slide1.png' 
+          header='La banane Meunier' 
+          headerText='A bag is a kind of soft container. It can hold or carry things. It may be made from cloth, leather, plastic, or paper.'
+        />
       </CarouselCompound.Page>
       <CarouselCompound.Page>
-        <div className={`${classes.item} ${classes.item3}`}>Item 3</div>
+      <ImageSlider source='/assets/sliderImages/slide1.png' 
+          header='La banane Meunier' 
+          headerText='A bag is a kind of soft container. It can hold or carry things. It may be made from cloth, leather, plastic, or paper.'
+        />
       </CarouselCompound.Page>
       </CarouselCompound>
       
