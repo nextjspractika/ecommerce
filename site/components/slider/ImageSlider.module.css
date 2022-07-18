@@ -1,0 +1,44 @@
+.img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.text{
+    position: absolute;
+    top: 175px;
+    left: 51px;
+}
+.headerText{
+    width: 370px;
+    height: 74px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    margin-top: 24px;
+}
+.header{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: white;
+}
+.button
+{
+    width: 135px;
+    height: 40px;
+    background: #FDAC1F;
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 10px;
+}

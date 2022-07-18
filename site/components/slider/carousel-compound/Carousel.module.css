@@ -1,0 +1,48 @@
+.mainContainer {
+  width: 1300px;
+  height:  530px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.window {
+  height: 530px;
+  width: 1300px;
+  border-radius: 30px;
+  margin:auto;
+  overflow: hidden;
+}
+.window>img{
+  object-fit: cover;
+}
+.allPagesContainer {
+  height: 100%;
+  display: flex;
+  transition: translate;
+  transition-property: transform;
+  /* transition-duration: 300ms; */
+  transition-timing-function: ease-in-out;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  width: 24px;
+  height: 16px;
+  bottom: 120px;
+  left: 0;
+}
+.Leftarrow
+{
+  left: 54px;
+  z-index: 1;
+  background-image: url('/assets/sliderImages/LeftArrow.svg');
+}
+.Rightarrow
+{
+  left: 91px;
+  
+  background-image: url('/assets/sliderImages/RightArrow.svg');
+}
